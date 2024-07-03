@@ -5,8 +5,8 @@
 \title{按纽生成生成器界面}
 \usage{
 blackBillUI(
-  tabTitle = "黑名单",
-  colTitles = c("数据模块", "操作区域", "显示区域"),
+  tabTitle = "UnBilledAr黑名单",
+  colTitles = c("操作区域", "操作区域", "显示区域"),
   widthRates = c(6, 6, 12),
   func_left = blackBillUI_left,
   func_right = blackBillUI_right,
