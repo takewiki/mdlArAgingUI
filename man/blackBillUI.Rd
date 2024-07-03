@@ -2,7 +2,7 @@
 % Please edit documentation in R/blackBill.R
 \name{blackBillUI}
 \alias{blackBillUI}
-\title{按纽生成生成器界面}
+\title{黑名单界面}
 \usage{
 blackBillUI(
   tabTitle = "UnBilledAr黑名单",
@@ -30,7 +30,7 @@ blackBillUI(
 返回值
 }
 \description{
-按纽生成生成器界面
+黑名单界面
 }
 \examples{
 blackBillUI()

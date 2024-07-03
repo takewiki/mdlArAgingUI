@@ -1,4 +1,4 @@
-#' 按纽生成生成器界面
+#' 黑名单界面
 #'
 #' @param colTitles  主页标题
 #' @param widthRates 左右比例
