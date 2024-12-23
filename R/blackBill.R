@@ -1,4 +1,4 @@
-#' 黑名单界面
+#' 按纽生成生成器界面
 #'
 #' @param colTitles  主页标题
 #' @param widthRates 左右比例
@@ -13,12 +13,12 @@
 #'
 #' @examples
 #' blackBillUI()
-blackBillUI <- function(tabTitle ='UnBilledAr黑名单',
-                   colTitles =c('操作区域','操作区域','显示区域'),
-                   widthRates =c(6,6,12),
-                   func_left = blackBillUI_left,
-                   func_right =blackBillUI_right,
-                   func_bottom = blackBillUI_bottom
+blackBillUI <- function(tabTitle ='黑名单',
+                        colTitles =c('数据模块','操作区域','显示区域'),
+                        widthRates =c(6,6,12),
+                        func_left = blackBillUI_left,
+                        func_right =blackBillUI_right,
+                        func_bottom = blackBillUI_bottom
 ) {
 
   #三栏式设置，可以复制
@@ -42,9 +42,10 @@ blackBillUI_left <- function() {
 
 
   res <- tagList(
-    tsui::uiTemplate(templateName = 'UnBilledAr黑名单'),
-    tsui::mdl_file(id = 'btn_blackBill', label = '上传UnBilledAr黑名单'),
-    tsui::mdl_text2(id = 'text_blackBill_FProjectNumber',label ='项目号' ,value ='' ),
+    tsui::uiTemplate(templateName = '应收账龄黑名单'),
+    tsui::mdl_file(id = 'btn_blackBill', label = '上传黑名单数据'),
+    shiny::actionButton(inputId = 'btn_blackBill_upload' , label = '上传数据'),
+
   )
   return(res)
 
@@ -60,9 +61,10 @@ blackBillUI_left <- function() {
 #' blackBillUI_bottom()
 blackBillUI_right <- function() {
   res <- tagList(
-    shiny::actionButton(inputId = 'btn_blackBill_upload' , label = '上传数据'),
-    shiny::actionButton(inputId = 'btn_blackBill_view' , label = '查看UnBilledAr黑名单'),
-    shiny::actionButton(inputId = 'btn_blackBill_delete' , label = '删除UnBilledAr黑名单'),
+
+    shiny::actionButton(inputId = 'btn_blackBill_view' , label = '查看黑名单'),
+    tsui::mdl_text2(id = 'text_blackBill_FProjectNumber',label ='项目号' ,value ='' ),
+    shiny::actionButton(inputId = 'btn_blackBill_delete' , label = '按项目号删除黑名单'),
   )
   return(res)
 
